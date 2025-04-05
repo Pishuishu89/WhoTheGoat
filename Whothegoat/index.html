@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhoTheGOAT - MVP Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    .slider-container {
+      margin: 20px auto;
+      width: 60%;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    #go-btn, #king-btn {
+      margin: 15px 10px 0;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+    #go-btn {
+      background-color: #007bff;
+    }
+    #go-btn:hover {
+      background-color: #0056b3;
+    }
+    #king-btn {
+      background-color: purple;
+    }
+    #king-btn:hover {
+      background-color: indigo;
+    }
+    #lebron-container {
+      margin-top: 30px;
+      display: none;
+    }
+    #lebron-container img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 16px;
+      margin-top: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    #lebron-container h2 {
+      font-size: 2em;
+      color: purple;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏀 WhoTheGOAT: MVP of 2024–2025?</h1>
+
+  <div class="slider-container">
+    <label for="points">Scoring (PPG)</label>
+    <input type="range" id="points" min="0" max="10" value="5">
+
+    <label for="assists">Playmaking (APG)</label>
+    <input type="range" id="assists" min="0" max="10" value="5">
+
+    <label for="rebounds">Rebounding (RPG)</label>
+    <input type="range" id="rebounds" min="0" max="10" value="5">
+
+    <label for="impact">Team Impact (Win Shares / +\-)</label>
+    <input type="range" id="impact" min="0" max="10" value="5">
+
+    <label for="clutch">Clutch Factor</label>
+    <input type="range" id="clutch" min="0" max="10" value="5">
+
+    <button id="go-btn">Go!</button>
+    <button id="king-btn">👑 The King</button>
+  </div>
+
+  <div id="lebron-container">
+    <h2>King LeBron James is the GOAT 👑</h2>
+    <img src="kingjames.png" alt="LeBron James with a Crown">
+  </div>
+
+  <script>
+    document.getElementById("king-btn").addEventListener("click", function() {
+      document.getElementById("lebron-container").style.display = "block";
+    });
+  </script>
+</body>
+</html>
